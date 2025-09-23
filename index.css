@@ -23,6 +23,23 @@ nav, .nav-options{
     justify-content: space-between;
     align-items: center;
 }
+.nav-options p{
+    font-size: 1.2rem;
+    padding:10px;
+    border: 2px solid rgba(225, 225, 225,0.1);
+    border-radius: 10px;
+}
+
+.nav-options p:hover{
+    cursor: pointer;
+    border: 2px solid #2e9296;
+    transition: ease-in-out all 0.1s;
+}
+.nav{
+    background-color:#41aec6;
+    color: white;
+    width: 100px;
+}
 
 .nav-options p, .nav-options button{
     margin-right: 20px;
@@ -41,18 +58,27 @@ nav, .nav-options{
     transform:scale(1.02) ;
 }
 
-.nav-options p{
-    font-size: 1.2rem;
+.nav-options a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: inherit;       /* takes the same color as parent */
+  text-decoration: none;/* removes underline */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
 }
 
-.nav{
-    background-color:#41aec6;
-    color: white;
-    width: 100px;
-}
 
 .logo{
-    color:#236c64;
+  color:#236c64;
+}
+
+.logo a{
+  color: inherit;       /* takes the same color as parent */
+  text-decoration: none;/* removes underline */
+
 }
 
 .banner{
