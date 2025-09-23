@@ -61,7 +61,7 @@ nav, .nav-options{
     height: 450px;       /* keep aspect ratio */
     display: grid;
     place-items: center; 
-    background-image: url(./images/climate-bnnr.jpg);
+    background-image: url(./media/climate-bnnr.jpg);
     color: white;
     font-size: 1.2rem;
 }
@@ -197,4 +197,68 @@ ul a {
     font-size: 0.85rem;
     margin-top: 10px;
     color: #dddddd;
+}
+
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* make sure it’s above everything */
+}
+
+/* Popup */
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  position: relative;
+
+  display: flex;
+  flex-direction: column; /* keeps close button + video stacked */
+  justify-content: center;
+  align-items: center;
+
+  min-height: 540px; 
+}
+
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  background-color: rgb(243, 38, 38);
+  width: 45px;
+  border-radius: 0 8px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.close-btn:hover{
+    background-color: rgb(249, 80, 80);
+    transition: 0.3s ease-in-out;
+}
+
+video {
+  width: 95%;
+  max-height: 80vh;   /* optional: keeps video from overflowing screen */
+  border-radius: 8px;
+  display: block;     /* makes it take its own line */
+  margin: 0 auto;     /* centers it horizontally */
 }
